@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="listado con empleos y filtros para encontrar el trabajo de tus sueños.">
+    <link rel="stylesheet" href="styles.css" />
+    <script async src="script.js"></script>
+    <title>📰 DevJobs-Empleos</title>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="DevJobs">
+            <h1> <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none"
+                    stroke=white stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-subtask">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M6 9l6 0" />
+                    <path d="M4 5l4 0" />
+                    <path d="M6 5v11a1 1 0 0 0 1 1h5" />
+                    <path d="M12 7m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z" />
+                    <path d="M12 15m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z" />
+                </svg> DevJobs</h1>
+        </div>
+
+        <nav>
+            <a href="">Empleos</a>
+        </nav>
+
+        <div>
+            <a href="">Publicar un empleo</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="Busqueda-de-trabajo">
+
+            <h1>Encuentra tu próximo trabajo</h1>
+            <p>Explora miles de oportunidades en el sector tecnológico.</p>
+
+            <form role="busqueda">
+                <div class="barra  de busqueda">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M21 21l-6 -6" />
+                    </svg>
+                    
+                    <input required type="text" placeholder="Buscar trabajos,empresas o habilidades">
+                </div>
+
+
+
+                <div class="filtro-de-busqueda">
+
+                    <select name="lenguajes" id="lenguajes">
+
+
+                        <!-- <li>Tecnología</li>
+                    </option>
+                    <option>
+                    <li>JavaScript</li>
+                    </option>
+                    <option>
+                    <li>Python</li>
+                    </option>
+                    <option>
+                    <li>Java</li>
+                    </option>
+                    <option>
+                    <li>React</li>
+                    </option>
+                    <option>
+                    <li>Node.js</li>
+                    </option>  es la manera arcaica que vi sin guiarme del codigo original debido que aqui no estoy enviando datos a servidor por lo tanto no es  valido segun lo entendido -->
+                        <option value="Tecnología" id="Tecnología">Tecnología</option>
+                        <option value="Python" id="Python">Python</option>
+                        <option value="JavaScript" id="JavaScript">JavaScript</option>
+                        <option value="Java" id="Java">Java</option>
+                        <option value="React" id="React">React</option>
+                        <option value="Node.js" id="Node.js">Node.js</option>
+                        <option value="Node.js" id="Node.js">Node.js</option>
+                        <option value="Typescript" id="Typescript">Typescript</option>
+                        <option value="PHP" id="PHP">PHP</option>
+                    </select>
+
+                    <select name="Ubicacion" id="Ubicacion">
+                        <option value="Ubicación" id="Ubicación">Ubicación</option>
+                        <option value="Colombia" id="Colombia">Colombia</option>
+                        <option value="España" id="España">España</option>
+                        <option value="Ecuador" id="Ecuador">Ecuador</option>
+                        <option value="Mexico" id="Mexico">Mexico</option>
+                    </select>
+
+                    <select name="Nivel de experiencia" id="Nivel de experiencia">
+                        <option value="Nivel de experiencia" id="Nivel de experiencia">Nivel de experiencia</option>
+                        <option value="Junior" id="Junior">Junior</option>
+                        <option value="Semi-Senior" id="Semi-Senior">Semi-Senior</option>
+                        <option value="Senior" id="Senior">Senior</option>
+                        <option value="Arquitecto de Software" id="Arquitecto de Software">Arquitecto de Software
+                        </option>
+                    </select>
+                </div>
+            </form>
+        </section>
+        <section>
+            <div>
+                <h2> Resultados de búsqueda</h2>
+            </div>
+        </section>
+    </main>
+
+
+</body>
+
+</html>
