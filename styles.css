@@ -232,7 +232,7 @@ main>section:nth-child(2) {
   main>section:nth-child(2) footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 16px
+    gap: 16px;
   }
 
   footer {
@@ -240,6 +240,9 @@ main>section:nth-child(2) {
     border-top: 1px solid var(--border);
     text-align: center;
     padding: 16px;
+
+  }
+ 
 
   }
 
