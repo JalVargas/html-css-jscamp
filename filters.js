@@ -1,3 +1,7 @@
+// import {state} from './config'
+// state.count++
+// console.log(state)
+
 const filter = document.querySelector('#filter-location')
 const mensaje = document.querySelector('#filter-selected-value')
 
@@ -19,4 +23,4 @@ filter.addEventListener('change', function () {
         job.classList.toggle('is-hidden', isShown === false)
     })
 })
-/**  con gpt me lo explique minusiosamente */
+/**  TO-DO */

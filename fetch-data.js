@@ -24,4 +24,4 @@ fetch("data.json") /*. fetch es asíncrono*/
 
 
 
-    /**buscar  que significa asíncrono y  su funciones  */
+    /**TO-DO  */

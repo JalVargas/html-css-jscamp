@@ -1,4 +1,4 @@
-class DevsJobsAvatar extends HTMLElement {
+class DevJobsAvatar extends HTMLElement {
     constructor() {
         super();  //llamar al constructor de HTMLElement
         this.attachShadow({ mode: 'open' })
@@ -33,4 +33,6 @@ class DevsJobsAvatar extends HTMLElement {
     }
 
 }
-customElements.define('devjobs-avatar', DevsJobsAvatar)
+customElements.define('devjobs-avatar', DevJobsAvatar)
+
+/**TO-DO */
