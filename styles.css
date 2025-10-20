@@ -267,7 +267,7 @@ button {
   color: white;
   font-weight: 400;
   /**/
-  border: none;
+  border: 1rem;
   cursor: pointer;
   transition: all 0.2s;
   font-family: inherit;
