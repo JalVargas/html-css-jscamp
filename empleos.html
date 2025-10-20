@@ -5,43 +5,49 @@
     <meta charset="UTF-8" />
     <meta name="description" content="listado con empleos y filtros para encontrar el trabajo de tus sueños.">
     <link rel="stylesheet" href="styles.css" />
-    <script async src="script.js"></script>
-    <title>📰 DevJobs-Empleos</title>
-
-
+    
+    <title>DevJobs-Empleos 📰 </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); /* el import para aplicar la fuente en la pagination*/
+    </style>
+    <script defer src="script.js"></script>
+    <script type="module" src="main.js"></script>
 </head>
 
 <body>
     <header>
-            <h1> <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none"
-                    stroke=white stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-subtask">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M6 9l6 0" />
-                    <path d="M4 5l4 0" />
-                    <path d="M6 5v11a1 1 0 0 0 1 1h5" />
-                    <path d="M12 7m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z" />
-                    <path d="M12 15m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z" />
-                </svg> DevJobs</h1>
-        </div>
+
+        <h1> <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke=white
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-subtask">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M6 9l6 0" />
+                <path d="M4 5l4 0" />
+                <path d="M6 5v11a1 1 0 0 0 1 1h5" />
+                <path d="M12 7m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z" />
+                <path d="M12 15m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z" />
+            </svg> DevJobs</h1>
+
 
         <nav>
             <a href="">Empleos</a>
         </nav>
 
         <div>
-            <a href="">Publicar un empleo</a>
+            <devjobs-avatar service="github" username="JalVargas" size="60"></devjobs-avatar>
+
+            <devjobs-avatar service="github" username="" size="32"></devjobs-avatar>
         </div>
     </header>
 
     <main>
-        <section class="Busqueda-de-trabajo">
+        <section class="jobs-search">
 
             <h1>Encuentra tu próximo trabajo</h1>
             <p>Explora miles de oportunidades en el sector tecnológico.</p>
 
-            <form role="busqueda">
-                <div class="barra  de busqueda">
+            <form id="empleos-search-form" role="search">
+                <div class="search-bar">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
                         class="icon icon-tabler icons-tabler-outline icon-tabler-search">
@@ -50,7 +56,8 @@
                         <path d="M21 21l-6 -6" />
                     </svg>
 
-                    <input required type="text" placeholder="Buscar trabajos,empresas o habilidades">
+                    <input name="search" id="empleos-search-input" required type="text"
+                        placeholder="Buscar trabajos,empresas o habilidades">
                 </div>
 
 
@@ -74,10 +81,10 @@
 
                 <div class="search-filters">
 
-                    <select name="lenguajes" id="filter-technology">
+                    <select name="technology" id="filter-technology">
 
 
-                        <option value="tecnología">Tecnología</option>
+                        <option value="">Tecnología</option>
                         <hr>
                         <option value="Java">Java</option>
                         <option value="JavaScript">JavaScript</option>
@@ -90,8 +97,8 @@
                     </select>
 
 
-                    <select name="Ubicacion" id="Ubicacion">
-                        <option value="ubicación">Ubicación</option>
+                    <select name="location" id="filter-location">
+                        <option value="">Ubicación</option>
                         <hr>
                         <option value="virtual">Virtual</option>
                         <option value="colombia">Colombia</option>
@@ -100,8 +107,8 @@
                         <option value="méxico">México</option>
                     </select>
 
-                    <select name="Nivel de experiencia" id="Nivel de experiencia">
-                        <option value="Nivel de experiencia">Nivel de experiencia</option>
+                    <select name="Experience-level" id="filter-experience-level">
+                        <option value="">Nivel de experiencia</option>
                         <hr>
                         <option value="junior">Junior</option>
                         <option value="semi-Senior">Semi-Senior</option>
@@ -110,12 +117,16 @@
                     </select>
                 </div>
             </form>
+            <span id="filter-selected-value"></span>
         </section>
         <section>
 
             <h2> Resultados de búsqueda</h2>
+
             <div class="jobs-listings">
-                <article class="jobs-listings-card">
+
+
+                <!-- <article class="jobs-listings-card">
                     <div>
                         <h3>Ingeniero de Software</h3>
                         <small> Tech Solution Inc. | Remoto</small>
@@ -154,6 +165,7 @@
                         <button class="button-aply-job" id="boton-importante">Aplicar</button>
                     </div>
                 </article>
+            </div> -->
             </div>
 
             <nav class="pagination">
@@ -163,11 +175,11 @@
                         <path d="M15 6l-6 6l6 6" />
                     </svg></a>
                 <a class="is-active" href="#">1</a>
-                <a class="is-active" href="#">2</a>
-                <a class="is-active" href="#">3</a>
-                <a class="is-active" href="#">4</a>
-                <a class="is-active" href="#">5</a>
-                <a class="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                <a href="#">2</a>
+                <a  href="#">3</a>
+                <a  href="#">4</a>
+                <a  href="#">5</a>
+                <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
                         class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -178,7 +190,7 @@
 
         </section>
     </main>
-    <footer style="padding-bottom:2000px;">
+    <footer style="padding-bottom: 2000px;">
         <small>&copy; 2025 DevJobs. todos los derechos reservados.</small>
     </footer>
 
