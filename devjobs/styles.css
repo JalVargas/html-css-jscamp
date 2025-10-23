@@ -116,7 +116,7 @@ h1 {
 
 h1 + p {
   text-wrap: balance;
-  margin-bottom: 2rem
+  margin-bottom: 2rem;
 }
 
 /* Header */
@@ -489,3 +489,4 @@ article {
     pointer-events: none;
   }
 }
+
