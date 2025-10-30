@@ -39,5 +39,3 @@ class DevJobsAvatar extends HTMLElement {
 }
 
 customElements.define('devjobs-avatar', DevJobsAvatar)
-
-//TO-DO

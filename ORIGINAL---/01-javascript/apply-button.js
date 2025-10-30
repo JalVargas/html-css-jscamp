@@ -9,7 +9,7 @@ jobsListingSection.addEventListener('click', function(event) {
     element.disabled = true
   }
 })
-// TO-DO
+
 
 // - Comentarios con otros eventos interesantes
 
