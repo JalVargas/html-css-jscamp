@@ -19,13 +19,11 @@
     &:focus {
       background-color: #fff;
     }
-
     &:active {
       transform: scale(0.9);
     }
   }
 }
-
 .isActive {
   background-color: var(--primary-light);
   color: white;

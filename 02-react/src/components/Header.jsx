@@ -16,7 +16,6 @@ export function Header() {
         </svg>
         DevJobs
       </h1>
-
       <nav>
         <a href="">Empleos</a>
       </nav>

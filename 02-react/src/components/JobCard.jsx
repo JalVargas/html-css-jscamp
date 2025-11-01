@@ -6,12 +6,10 @@ export function JobCard({ job }) {
   const handleApplyClick = () => {
     setIsApplied(true);
   };
-
   const buttonClasses = isApplied
     ? "button-apply-job is-applied"
     : "button-apply-job";
   const buttonText = isApplied ? "Aplicado" : "Aplicar";
-
   return (
     <article
       className="job-listing-card"

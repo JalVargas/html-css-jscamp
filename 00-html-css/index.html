@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>DevJobs - Inicio</title>
+    <title>DevJobs - Inicio 👨🏽‍💻</title>
     <meta charset="UTF-8" />
     <meta
       name="description"
@@ -9,30 +9,43 @@
     />
 
     <link rel="stylesheet" href="./styles.css" />
+    <!--el import para aplicar la fuente en la pagination-->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+    </style>
   </head>
 
   <body>
     <header>
       <h1>
         <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="35"
+          height="35"
+          viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
+          stroke="white"
+          stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-subtask"
         >
-          <polyline points="16 18 22 12 16 6"></polyline>
-          <polyline points="8 6 2 12 8 18"></polyline>
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M6 9l6 0" />
+          <path d="M4 5l4 0" />
+          <path d="M6 5v11a1 1 0 0 0 1 1h5" />
+          <path
+            d="M12 7m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z"
+          />
+          <path
+            d="M12 15m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z"
+          />
         </svg>
         DevJobs
       </h1>
 
       <nav>
-        <!-- <a href="">
-        Inicio
-      </a> -->
+        <!-- <a href="">Inicio</a> -->
         <a href="empleos.html">Empleos</a>
       </nav>
 
@@ -61,7 +74,7 @@
               height="24"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="currentColor"
+              stroke="white"
               stroke-width="1"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -75,10 +88,10 @@
             <input
               required
               type="text"
-              placeholder="Buscar empleos por título, habilidad o empresa"
+              placeholder="Buscar empleos por título, habilidad o empresa."
             />
 
-            <button disabled type="submit">Buscar</button>
+            <button type="submit">Buscar</button>
           </div>
         </form>
       </section>
@@ -96,7 +109,7 @@
         <footer>
           <article>
             <svg
-              fill="currentColor"
+              fill="white"
               height="32"
               viewBox="0 0 256 256"
               width="32"
@@ -115,7 +128,7 @@
 
           <article>
             <svg
-              fill="currentColor"
+              fill="white"
               height="32"
               viewBox="0 0 256 256"
               width="32"
@@ -134,16 +147,26 @@
 
           <article>
             <svg
-              fill="currentColor"
-              height="32"
-              viewBox="0 0 256 256"
-              width="32"
               xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#f7f3f3"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-building"
             >
-              <path
-                d="M240,208H224V96a16,16,0,0,0-16-16H144V32a16,16,0,0,0-24.88-13.32L39.12,72A16,16,0,0,0,32,85.34V208H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM208,96V208H144V96ZM48,85.34,128,32V208H48ZM112,112v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm-32,0v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm0,56v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Zm32,0v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Z"
-              ></path>
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 21l18 0" />
+              <path d="M9 8l1 0" />
+              <path d="M9 12l1 0" />
+              <path d="M9 16l1 0" />
+              <path d="M14 8l1 0" />
+              <path d="M14 12l1 0" />
+              <path d="M14 16l1 0" />
+              <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
             </svg>
             <h3>Obtén el salario que mereces</h3>
             <p>
@@ -153,9 +176,12 @@
         </footer>
       </section>
     </main>
-
     <footer>
       <small>&copy; 2025 DevJobs. Todos los derechos reservados.</small>
     </footer>
+
+    <!-- <footer style="padding-bottom: 100000px">
+
+  </footer> -->
   </body>
 </html>

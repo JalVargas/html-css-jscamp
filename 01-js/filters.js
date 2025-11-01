@@ -1,7 +1,5 @@
 import { state } from "./config.js";
-
 state.count++;
-
 console.log(state);
 
 const filter = document.querySelector("#filter-location");
@@ -17,11 +15,11 @@ filter.addEventListener("change", function () {
   } else {
     mensaje.textContent = "";
   }
-
   jobs.forEach((job) => {
-    // const modalidad = job.dataset.modalidad
+    // const modalidad =job.dataset.modalidad
     const modalidad = job.getAttribute("data-modalidad");
     const isShown = selectedValue === "" || selectedValue === modalidad;
     job.classList.toggle("is-hidden", isShown === false);
   });
 });
+/**  TO-DO */
