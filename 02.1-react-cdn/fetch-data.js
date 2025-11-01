@@ -1,10 +1,9 @@
 const container = document.querySelector(".jobs-listings");
 
 const RESULTS_PER_PAGE = 3;
-
-fetch("./data.json") /* fetch es asíncrono */
-  .then((response) => {
-    return response.json();
+fetch("data.json") /*. fetch es asíncrono*/
+  .then((Response) => {
+    return Response.json();
   })
   .then((jobs) => {
     jobs.forEach((job) => {
@@ -16,12 +15,14 @@ fetch("./data.json") /* fetch es asíncrono */
       article.dataset.technology = job.data.technology;
 
       article.innerHTML = `<div>
-          <h3>${job.titulo}</h3>
-          <small>${job.empresa} | ${job.ubicacion}</small>
-          <p>${job.descripcion}</p>
-        </div>
-        <button class="button-apply-job">Aplicar</button>`;
+    <h3> ${job.titulo}</h3>
+    <small>${job.empresa} | ${job.ubicacion}</small>
+    <p>${job.descripcion}</p>
+    </div>
+    <button class="button-apply-job">Aplicar</button>`;
 
       container.appendChild(article);
     });
   });
+
+/**TO-DO  */

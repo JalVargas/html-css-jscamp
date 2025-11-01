@@ -18,28 +18,28 @@
   --shadow: rgba(0, 0, 0, 0.3);
   --input-bg: #1e293b;
   --hsla-example: hsla(210, 100%, 56%, 1);
+  --fuente-principal: "lato", sans-serif;
 }
 
-@font-face {
+/* @font-face {
   font-family: "Inter Variable";
   font-style: normal;
   font-display: swap;
   font-weight: 100 900;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.woff2)
-    format("woff2-variations");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
-    U+2212, U+2215, U+FEFF, U+FFFD;
-}
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.woff2) format ('woff2-variations');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+ } */
 
 body {
-  font-family: system-ui;
+  font-family: var(--fuente-principal);
   background-color: var(--background);
   color: var(--text-primary);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  /**/
   line-height: 1.6;
+  /**/
 }
 
 select {
@@ -52,6 +52,7 @@ select {
   cursor: pointer;
   transition: all 0.2s;
   appearance: none;
+  /**/
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 0.5rem center;
@@ -63,19 +64,26 @@ select {
   }
 
   &:focus {
-    outline: 2px solid #1173d4;
+    outline: 2px solid #0d5ba8;
     outline-offset: 2px;
   }
 }
 
-/* Títulos principales */
+/*Titulo Principales*/
+/* h1 {
+  font-size: 2.25rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+} */
 h1 {
   font-size: 1.5rem;
   line-height: 1.2;
   text-wrap: balance;
+  /**/
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  /**/
 
   svg {
     width: 2rem;
@@ -89,7 +97,7 @@ h1 + p {
   margin-bottom: 2rem;
 }
 
-/* Header */
+/*Header*/
 header {
   border-bottom: 1px solid var(--border);
   background: var(--background);
@@ -106,7 +114,7 @@ header {
   }
 }
 
-/* Navegación del header a otras páginas */
+/* Navegacion del header a otras paginas*/
 nav {
   align-items: center;
   gap: 1rem;
@@ -126,20 +134,20 @@ nav {
   }
 }
 
-/* Botones del Header */
+/*Botones del Header*/
 header div a {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   background-color: #334155;
   color: var(--text-primary);
   display: inline-block;
+  /**/
   font-size: 0.875rem;
   font-weight: 700;
   text-decoration: none;
-  /* TODO */
 }
 
-/* Hero */
+/*Hero*/
 main > section:nth-child(1) {
   height: 500px;
   text-align: center;
@@ -147,6 +155,10 @@ main > section:nth-child(1) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  .button-apply-job {
+    margin-left: 300px;
+  }
 
   h1 {
     padding-top: 36px;
@@ -157,7 +169,9 @@ main > section:nth-child(1) {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /**/
     z-index: -1;
+    /**/
     left: 0;
     right: 0;
     mask-image: linear-gradient(
@@ -165,10 +179,12 @@ main > section:nth-child(1) {
       rgba(16, 25, 34, 1) 5%,
       rgba(16, 25, 34, 0) 80%
     );
+    /**/
   }
 }
 
-/* Formulario de Búsqueda */
+/*Formulario de Búsqueda*/
+
 form {
   max-width: 42rem;
   width: 100%;
@@ -192,6 +208,7 @@ form span {
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  /**/
 }
 
 form input[type="text"] {
@@ -201,13 +218,36 @@ form input[type="text"] {
   outline: none;
   color: var(--text-primary);
   padding: 0.75rem 0.5rem;
+  /**/
   font-size: 1rem;
   font-family: inherit;
 }
 
 form input[type="text"]::placeholder {
   color: #64748b;
+  background-color: transparent;
 }
+
+/* form button[type="submit"] {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary);
+  color: white;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-family: inherit;
+  font-size: 1rem;
+  white-space: nowrap;
+} */
+
+/* form button[type="submit"]:hover,
+form button[type="submit"]:focus {
+  background-color: var(--primary-hover);
+  outline: 2px solid white;
+  outline-offset: 2px;
+} */
 
 button {
   padding: 0.75rem 1.5rem;
@@ -215,23 +255,29 @@ button {
   background-color: var(--primary);
   color: white;
   font-weight: 400;
+  /**/
   border: none;
   cursor: pointer;
   transition: all 0.2s;
   font-family: inherit;
+  /**/
   font-size: 1rem;
+  /**/
   white-space: nowrap;
+  /**/
 
-  &:hover, /* pseudo-clase que significa que el ratón está encima */
+  &:hover,
   &:focus {
-    /* pseudo-clase que significa que el elemento tiene el foco */
     background-color: var(--primary-hover);
     outline: 2px solid white;
+    /**/
     outline-offset: 2px;
+    /**/
   }
 
   &:active {
     transform: scale(0.9);
+    /**/
   }
 
   &:disabled {
@@ -240,7 +286,7 @@ button {
   }
 }
 
-/* Features Section */
+/*Features Section*/
 main > section:nth-child(2) {
   padding-inline: 1rem;
   background-color: var(--background);
@@ -257,11 +303,11 @@ main > section:nth-child(2) {
     p {
       opacity: 0.75;
     }
-  }
 
-  & > div {
-    max-width: 1280px;
-    margin: 0 auto;
+    & > div {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -279,40 +325,17 @@ main > section:nth-child(2) > div > div:first-child > p {
   margin: 0 auto;
 }
 
-/* Grid de Features */
+/*Grid de Features */
+
 main > section:nth-child(2) footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /**/
   gap: 16px;
 }
 
-/* Feature Cards */
-/* article {
-  background-color: var(--card-bg);
-  padding: 2rem;
-  margin-bottom: 16px;
-  border-radius: 0.5rem;                   
-  box-shadow: 0px 1px 3px 0 var(--shadow); 
+/* footer*/
 
-  svg {
-    color: var(--primary-light);          
-    background: rgba(0, 153, 255, 0.3);  
-    border-radius: 9999px;               
-    width: 64px;                         
-    height: 64px;                        
-    padding: 16px;                       
-  }
-
-  h3 {
-    font-weight: 500;
-  }
-
-  p {
-    color: var(--text-muted);
-  }
-} */
-
-/* Footer */
 footer {
   background-color: var(--background);
   border-top: 1px solid var(--border);
@@ -331,6 +354,7 @@ article {
   margin-bottom: 16px;
   border-radius: 0.5rem;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+  /**/
 
   svg {
     color: var(--primary-light);
@@ -350,11 +374,12 @@ article {
   }
 }
 
-/* Jobs Search */
+/*jobs search*/
 .jobs-search {
   margin: 0;
   padding: 0;
   height: auto !important;
+  /**/
 
   h1 {
     font-size: 2.5rem;
@@ -369,18 +394,20 @@ article {
 
   .search-bar {
     background: var(--input-bg);
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem 0.25rem;
   }
 
   .search-filters {
     display: flex;
     flex-wrap: wrap;
+    /*TODO: Review this*/
     margin-top: 0.5rem;
   }
 
   form {
     width: 100%;
     max-width: 1280px;
+    /**/
   }
 
   form div {
@@ -393,19 +420,22 @@ article {
 .jobs-listings {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 1rem;
+  margin-left: auto;
 
-  .job-listing-card {
+  .jobs-listings-card {
     background: none;
     box-shadow: none;
     border-radius: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     margin: 0;
 
-    display: flex; /* valor original */
+    display: flex;
     align-items: start;
+    /**/
     gap: 1rem;
 
     &.is-hidden {
+      /**/
       display: none;
     }
 
@@ -427,8 +457,10 @@ article {
 .pagination {
   display: flex;
   justify-content: center;
+  /**/
   gap: 0.5rem;
   margin-block: 2rem;
+  /**/
 
   a {
     display: flex;
@@ -440,9 +472,10 @@ article {
     color: var(--text-muted);
     border-radius: 0.375rem;
     transition: all 0.3s;
+    /**/
 
-    &:hover,
-    &:focus {
+    &:focus,
+    &:hover {
       background-color: #fff;
     }
 
@@ -451,17 +484,21 @@ article {
     }
 
     &.is-active {
+      /**/
       background-color: var(--primary-light);
       color: white;
       pointer-events: none;
+      /**/
     }
   }
 }
 
-.button-apply-job {
+.jobs-listings-card .button-apply-job {
   background: #09f;
+  margin-left: auto;
 
   &.is-applied {
+    /**/
     background: #4caf50;
     pointer-events: none;
   }
